@@ -24,6 +24,7 @@ namespace API.Extentions
             services.AddAutoMapper(typeof(AutomapperProfiles).Assembly);
             services.AddDbContext<DataContext>(options =>
            {
+               
                var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                string connStr;
 

@@ -5,8 +5,10 @@
   </PropertyGroup>
 
   <Target Name="PrePublishTarget" AfterTargets="Publish">
-    <Exec Command="dotnet ef database update" />
-  </Target>
+    <Exec Command="echo  &quot;Migrating Database ...&quot;" />
+    <Exec Command="dotnet-ef database update"/>
+</Target>
+
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />

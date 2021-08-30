@@ -6,9 +6,8 @@
 
   <Target Name="PrePublishTarget" AfterTargets="Publish">
     <Exec Command="echo  &quot;Migrating Database ...&quot;" />
-    <Exec Command="dotnet-ef database update" />
+    <Exec Command="dotnet ef database update" />
 </Target>
-
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
@@ -34,8 +33,8 @@
     <ProjectReference Include="..\EmailService\EmailService.csproj" />
   </ItemGroup> -->
 
-  <!-- <ItemGroup>
+  <ItemGroup>
     <Folder Include="Views\Authorization\" />
-  </ItemGroup> -->
+  </ItemGroup>
 
 </Project>
